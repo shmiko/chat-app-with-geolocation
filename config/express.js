@@ -1,6 +1,7 @@
 /**
  * Module dependencies.
  */ 
+ //made change to how mongostore was being called
 var express = require('express'),
     //session = require('session')
     mongoStore = require('connect-mongo')(express),
