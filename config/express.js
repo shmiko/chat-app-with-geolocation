@@ -1,7 +1,8 @@
 /**
  * Module dependencies.
- */
+ */ 
 var express = require('express'),
+    //session = require('session')
     mongoStore = require('connect-mongo')(express),
     flash = require('connect-flash'),
     helpers = require('view-helpers'),
@@ -50,8 +51,7 @@ module.exports = function(app, passport, db) {
         app.use(express.session({
             secret: 'MEAN',
             store: new mongoStore({
-                db: db.connection.db,
-                collection: 'sessions'
+                db: 'sessions'
             })
         }));
 
